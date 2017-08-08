@@ -54,6 +54,9 @@ def main():
     data = load_data()
     theta0, theta1 = gradient_descent(data, alpha)
 
+    print "theta0", theta0
+    print "theta1", theta1
+
     x = numpy.linspace(10, 25, 100)
     plt.plot(data.keys(), data.values(), 'o', x, theta0 + theta1*x)
     plt.xlabel("Cricket Chirps")
